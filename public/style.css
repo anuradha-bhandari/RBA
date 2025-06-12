@@ -1,0 +1,195 @@
+.navbar{
+    width:100%;
+    height: 80px;
+    background-color: black;
+    display:flex ;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.logo{
+    color:white;
+    padding-left: 30px;
+
+}
+.nav ul{
+    padding: 20px;
+    
+}
+.nav ul li{
+    display: inline;
+    padding:20px;
+}
+.nav ul li a{
+    text-decoration: none;
+    color: white;
+    font-size: 15px;
+}
+
+/*.home{
+    width:100%;
+    height:635px;
+    background-color:blueviolet ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("homeback.jpg");
+    backdrop-filter: blur(20px);
+
+
+}
+.homed1{
+    margin-bottom:25px;
+    width:600px;
+    height:500px;
+    background-color: brown;
+    box-shadow:0 0 10px rgba(0,0,0,0.2) ;
+
+}
+
+.homed2{
+    margin-bottom:25px;
+    width:600px;
+    height:500px;
+    background-color: rgb(42, 165, 44);
+        background-image: url("egg.jpg");
+
+}*/
+
+.home {
+    position: relative;
+    width: 100%;
+    height: 635px;
+    background-color: beige;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* Pseudo-element for background image with opacity */
+.home::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("homeback.jpg");
+    background-size: cover;
+    background-position: center;
+    opacity: 0.5; /* Opacity only affects background */
+    z-index: 0;
+}
+
+.homed1,
+.homed2 {
+    position: relative; /* Ensure these are above the background */
+    z-index: 1;
+    margin-bottom: 25px;
+    width: 600px;
+    height: 500px;
+}
+
+.homed1 {
+    background-color: brown;
+}
+
+.homed2 {
+    background-color: blueviolet;
+    background-image: url("egg.jpg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+.setlogin
+ {
+    margin: 0;
+    height: 100vh;
+    background-image: url(book.jpg);
+    background-repeat: no-repeat;
+    background-size: cover; /* Better for background image */
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+ }
+
+ form {
+    background-color: rgba(240, 240, 240, 0.4);
+    width: 500px;
+    padding: 30px;
+    margin-top: 90px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* Container for input and icon */
+  .input-group {
+    position: relative; /* For absolute positioning inside */
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  /* Icon styles inside input group */
+  .input-group i {
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    transform: translateY(-50%);
+    color: #999;
+    font-size: 18px;
+    pointer-events: none; /* so icon doesn't block input focus */
+  }
+
+  /* Input field styles */
+  .control {
+    width: 100%;
+    height: 45px;
+    padding-left: 45px; /* space for icon inside input */
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    padding: 0 15px;
+    font-size: 16px;
+    box-sizing: border-box;
+    transition: border-color 0.3s, box-shadow 0.3s;
+  }
+
+  /* Focus effect on inputs */
+  .control:focus {
+    outline: none;
+    border-color: #4a90e2;
+    box-shadow: 0 0 8px rgba(74, 144, 226, 0.3);
+  }
+
+  /* Submit button styling */
+input[type="submit"] {
+    width: 100%;
+    height: 45px;
+    border-radius: 8px;
+    border: none;
+    background: radial-gradient(circle at 30% 30%, #78035d, #357ABD);
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s, box-shadow 0.3s;
+  }
+
+input[type="submit"]:hover {
+    background: radial-gradient(circle at 30% 30%, #4d0a95, #a912c7);
+    box-shadow: 0 4px 12px rgba(53, 122, 189, 0.4);
+  }
+
+
+  .register-text {
+    display: flex; /* Arrange children in one line */
+    align-items: center; /* Vertically center items */
+    margin-top: 20px;
+    font-size: 1em;
+    color: #333;
+    margin-right: 10px;
+  }
