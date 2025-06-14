@@ -1,11 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <h1>Welcome to our Restaurant</h1>
+
+<div class="dashboard">
+
+  <aside class="dashmenu">
+
+    <div class="dashlogo">
+       <h1>Foodies</h1>
+    </div>
+
+    <nav class="dashnav">
+      <ul>
+        <li><a href="#"><i class="fa-solid fa-house"></i> Dashboard</a></li>
+
+        <!-- CSS-Only Dropdown -->
+        <li class="has-dropdown">
+          <input type="checkbox" id="category-toggle" hidden>
+          <label for="category-toggle" class="dropdown-label">
+            <i class="fas fa-tags"></i> Category <i class="fas fa-caret-down float-right"></i>
+          </label>
+          <ul class="dropdown">
+            <li><a href="/addcategory"><i class="fas fa-plus"></i> Add Category</a></li>
+            <li><a href="/viewcategory"><i class="fas fa-eye"></i> View Category</a></li>
+          </ul>
+        </li>
+
+        <li><a href="#"><i class="fas fa-bars"></i> Menu</a></li>
+        <li><a href="#"><i class="fas fa-users"></i> Staffs</a></li>
+        <li><a href="#"><i class="fas fa-chair"></i> Tables</a></li>
+        <li><a href="#"><i class="fas fa-receipt"></i> Orders</a></li>
+        <li><a href="#"><i class="fas fa-file-invoice-dollar"></i> Bills</a></li>
+        <li><a href="#"><i class="fas fa-chart-line"></i> Reports</a></li>
+      </ul>
+    </nav>
+  </aside>
+
+  
+</div>
+
 </body>
 </html>

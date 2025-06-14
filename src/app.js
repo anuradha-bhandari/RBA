@@ -6,10 +6,10 @@ app.use(express.static("public"));
 let session= require("express-session");
 let bodyparser=require("body-parser");
 let db=require("./config/db.js");
-app.use(express.urlencoded({extended:false}));
+app.use(express.urlencoded({extended:true}));
 app.use(bodyparser.json());
 app.use(session({
-    secret:'XYZ',
+    secret:'11111111f',
     resave:true,
     saveUninitialized:false
 })); 

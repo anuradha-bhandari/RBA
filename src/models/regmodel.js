@@ -46,3 +46,70 @@ exports.getLoginUserProfile=(loginUserId)=>{
     });
     return promise;
 }
+
+exports.saveCatData=(name,callback)=>{
+
+        conn.query("insert into category values ('0',?)",[name],(err,result)=>{ 
+      if(err)
+        {
+            return "err"
+        }
+        else
+        {
+             return "result"
+        }
+    
+        });
+
+   
+}
+
+
+exports.getLoginCatProfile=()=>{
+ let promise=new Promise((resolve,reject)=>{
+    conn.query("select *from category",(err,result)=>{
+      if(err)
+      {
+        reject(err);
+      }
+      else
+      {
+        resolve(result);
+      }
+    })
+ });
+  return promise;
+}
+
+exports.deleteCat=(id)=>{
+
+    let promise=new Promise((resolve,reject)=>{
+    conn.query("delete from category where id=?",[id],(err,result)=>{
+      if(err)
+      {
+        reject(err);
+      }
+      else
+      {
+        resolve(result);
+      }
+    })
+ });
+  return promise;
+}
+
+exports.getAllCategories = () => {
+    return new Promise((resolve, reject) =>{
+        conn.query("SELECT *FROM category", (err, result) => {
+            if (err) {
+                reject(err);
+            } else {
+                resolve(result);
+            }
+        });
+    });
+};
+
+/*exports.updateDatafromDB=()=>{
+    
+}*/
