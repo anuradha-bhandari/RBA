@@ -3,28 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Navbar</title>
-    <link rel="Stylesheet" href="style.css"/>
+    <title>Navbar with Login Dropdown</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="navbar">
         <div class="logo">
-            <h2>logo</h2>
+            <h2>Logo</h2>
         </div>
         <div class="nav">
             <ul>
-                <li><a href="/">HOME</a></li>
-                <li><a href="#">ABOUT</a></li>
-                <li><a href="#">MENU</a></li>
-                <li><a href="#">CHEFS</a></li>
-                <li><a href="#">GALLERY</a></li>
-                <li><a href="#">CONTACT</a></li>
-                <li><a href="/login">LOGIN</a></li>
-
-
+                <li><a href="/">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Menu</a></li>
+                <li><a href="#">Chefs</a></li>
+                <li><a href="#">Gallery</a></li>
+                <li><a href="#">Contact</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropbtn">Login</a>
+                    <div class="dropdown-content">
+                        <a href="/login">Admin</a>
+                        <a href="/login/employee">Employee</a>
+                    </div>
+                </li>
             </ul>
         </div>
     </div>
-    
 </body>
 </html>

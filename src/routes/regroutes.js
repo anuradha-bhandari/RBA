@@ -39,5 +39,3 @@ router.post("/updatestaffData", ctrl.updateStaff);  // Process update form
 router.get("/staffsearch",ctrl.staffsearchdata);
 
 module.exports = router;   
-
-// controller in this file
