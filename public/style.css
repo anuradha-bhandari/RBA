@@ -1,65 +1,52 @@
-.navbar{
+.navbar
+{
     width:100%;
     height: 80px;
-    background-color: black;
-    display:flex ;
+    display: flex;
     justify-content: space-between;
-    margin-top: 10px;
+    background-color:black;
 }
 
-.logo{
-    color:white;
-    padding-left: 30px;
+.logo {
+    width: 100px;
+    height: 100px;
+    background-image: url("homelogo.png");
+    background-size: cover; /* ensures the image fits inside */
+    background-repeat: no-repeat;
+    background-position: center;
+    color: white;
+    padding:30px; /* top right bottom left */
+}
 
+
+.nav ul
+{
+    padding:20px;
 }
-.nav ul{
-    padding: 20px;
-    
-}
+
 .nav ul li{
     display: inline;
     padding:20px;
 }
+
 .nav ul li a{
     text-decoration: none;
-    color: white;
-    font-size: 15px;
+    color:white;
+    font-weight: bold;
+    font-size:20px;
 }
 
-/*.home{
-    width:100%;
-    height:635px;
-    background-color:blueviolet ;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-image: url("homeback.jpg");
-    backdrop-filter: blur(20px);
-
-
-}
-.homed1{
-    margin-bottom:25px;
-    width:600px;
-    height:500px;
-    background-color: brown;
-    box-shadow:0 0 10px rgba(0,0,0,0.2) ;
-
+.nav ul li a:hover
+{
+  background-color: #4C4B63;
 }
 
-.homed2{
-    margin-bottom:25px;
-    width:600px;
-    height:500px;
-    background-color: rgb(42, 165, 44);
-        background-image: url("egg.jpg");
 
-}*/
 
 .home {
     position: relative;
     width: 100%;
-    height: 635px;
+    height: 650px;
     background-color: beige;
     display: flex;
     justify-content: center;
@@ -75,24 +62,65 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url("homeback.jpg");
+    background-image: url("homeback1.jpg");
     background-size: cover;
     background-position: center;
     opacity: 0.5; /* Opacity only affects background */
     z-index: 0;
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
-.homed1,
-.homed2 {
+.homed1,.homed2 {
     position: relative; /* Ensure these are above the background */
     z-index: 1;
     margin-bottom: 25px;
-    width: 600px;
+    width: 500px;
     height: 500px;
+    font-family:'Times New Roman', Times, serif;
+    font-size: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+     border-style:solid;
 }
 
 .homed1 {
-    background-color: brown;
+  position: relative;
+  background-image: url("homeback2.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+
+.homed1::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* black overlay with 50% opacity */
+  z-index: 0;
+}
+
+.homed1 > * {
+  position: relative;
+  z-index: 1; /* keep content above overlay */
+}
+
+.homed1 h1{
+  color:white;
+  font-style:oblique;
+  text-align: center;
+  margin-top: 40px;
+  
+}
+
+.homed1 h4
+{
+  margin:50px 20px 20px 20px;
+  text-align: center;
+  font-style: italic;
+  color:white;
 }
 
 .homed2 {
@@ -102,94 +130,318 @@
     background-repeat: no-repeat;
 }
 
-.setlogin
- {
-    margin: 0;
-    height: 100vh;
-    background-image: url(book.jpg);
-    background-repeat: no-repeat;
-    background-size: cover; /* Better for background image */
-    font-family: 'Arial', sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: start;
- }
+body.setlogin {
+      background: url('homeback2.jpg') no-repeat center center fixed;
+      background-size: cover;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      font-family: Arial, sans-serif;
+    }
 
- form {
-    background-color: rgba(240, 240, 240, 0.4);
-    width: 500px;
-    padding: 30px;
-    margin-top: 90px;
-    border-radius: 15px;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-  }
+    form {
+      background-color: white;
+     /* backdrop-filter: blur(10px) saturate(180%); */
+      padding: 30px;
+      border-radius: 20px;
+      width: 100%;
+      max-width: 400px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+      text-align: center;
+    }
 
-  /* Container for input and icon */
-  .input-group {
-    position: relative; /* For absolute positioning inside */
-    width: 100%;
-    margin-bottom: 20px;
-  }
+    .logo {
+      margin-bottom: 20px;
+    }
 
-  /* Icon styles inside input group */
-  .input-group i {
-    position: absolute;
-    top: 50%;
-    left: 15px;
-    transform: translateY(-50%);
-    color: #999;
-    font-size: 18px;
-    pointer-events: none; /* so icon doesn't block input focus */
-  }
+    .logo img {
+      max-width: 80px;
+    }
 
-  /* Input field styles */
-  .control {
-    width: 100%;
-    height: 45px;
-    padding-left: 45px; /* space for icon inside input */
-    border-radius: 8px;
-    border: 1px solid #ccc;
-    padding: 0 15px;
-    font-size: 16px;
-    box-sizing: border-box;
-    transition: border-color 0.3s, box-shadow 0.3s;
-  }
+    .input-group {
+      position: relative;
+      margin-bottom: 20px;
+    }
 
-  /* Focus effect on inputs */
-  .control:focus {
-    outline: none;
-    border-color: #4a90e2;
-    box-shadow: 0 0 8px rgba(74, 144, 226, 0.3);
-  }
+    .input-group i {
+      position: absolute;
+      top: 50%;
+      left: 10px;
+      transform: translateY(-50%);
+      color: #888;
+    }
 
-  /* Submit button styling */
-input[type="submit"] {
-    width: 100%;
-    height: 45px;
-    border-radius: 8px;
-    border: none;
-    background: radial-gradient(circle at 30% 30%, #78035d, #357ABD);
-    color: #fff;
-    font-size: 16px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background 0.3s, box-shadow 0.3s;
-  }
+    .control {
+      width: 100%;
+      padding: 10px 10px 10px 35px;
+      border-radius: 30px;
+      box-sizing: border-box;
+    }
 
-input[type="submit"]:hover {
-    background: radial-gradient(circle at 30% 30%, #4d0a95, #a912c7);
-    box-shadow: 0 4px 12px rgba(53, 122, 189, 0.4);
-  }
+    input[type="submit"] {
+      background-color: #23232F;
+      color: white;
+      padding: 10px;
+      border-radius: 30px;
+      width: 100%;
+      cursor: pointer;
+      font-weight: bold;
+      margin-top: 10px;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #4C4B63;
+    }
+
+    .register-text {
+      margin-top: 15px;
+    }
+
+    .register-text a {
+      text-decoration: none;
+      color: #007BFF;
+      font-weight: bold;
+    }
+
+   
+ * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f8f9fa;
+}
+/* dashboard css */
+ /*.dashboard {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.dashboard::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+ 
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.3; 
+  z-index: 0;
+}
+
+.dashboard > * {
+  position: relative;
+  z-index: 1; 
+}
+
+.dashmenu {
+  width: 250px;
+   height: 100vh;
+  background-color: #25464d;
+  color: white;
+  padding: 20px 0;
+  
+}
+
+.dashlogo {
+  
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 20px;
+  font-weight: bold;
+  background-color: #25507b;
+  padding: 15px 0;
+  color: #fff;
+}
+
+.dashnav ul {
+  list-style: none;
+}
+
+.dashnav ul li {
+  position: relative;
+}
+
+.dashnav ul li a,
+.dropdown-label {
+  display: block;
+  padding: 12px 20px;
+  color: white;
+  text-decoration: none;
+  transition: background 0.3s;
+  cursor: pointer;
+}
+
+.dashnav ul li a:hover,
+.dropdown-label:hover {
+  background-color: #0E94A0;
+}
 
 
-  .register-text {
-    display: flex; /* Arrange children in one line */
-    align-items: center; /* Vertically center items */
-    margin-top: 20px;
-    font-size: 1em;
-    color: #333;
-    margin-right: 10px;
-  }
+.has-dropdown input[type="checkbox"] {
+  display: none;
+}
+
+.has-dropdown .dropdown {
+  display: none;
+  background-color:#25464d;
+}
+
+.has-dropdown input[type="checkbox"]:checked ~ .dropdown {
+  display: block;
+}
+
+.dropdown li a {
+  padding-left: 40px;
+  font-size: 15px;
+}
+
+.dashcontent {
+  flex: 1;
+  padding: 30px;
+  background-color: #fff;
+} */
+
+
+/* General reset and layout */
+
+/* body, html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+.dashboard {
+  display: flex;
+  min-height: 100vh;
+}
+
+.dashmenu {
+  width: 250px;
+  background-color: #333;
+  color: white;
+  padding: 20px 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+}
+
+.main-content {
+  margin-left: 250px;
+  padding: 20px;
+  flex-grow: 1;
+}
+
+.dashnav ul {
+  list-style: none;
+  padding: 0;
+}
+
+.dashnav ul li {
+  padding: 15px 20px;
+}
+
+.dashnav ul li a {
+  color: white;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+
+.dashnav ul li a i {
+  margin-right: 10px;
+}
+
+.has-dropdown label {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.dropdown {
+  display: none;
+  padding-left: 20px;
+}
+
+.has-dropdown input:checked ~ .dropdown {
+  display: block;
+} */
+
+
+.staff-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh; /* Full viewport height */
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+.staff-section h2 {
+  font-size: 28px;
+  margin-bottom: 30px;
+  position: relative;
+  display: inline-block;
+}
+
+.staff-section h2::after {
+  content: "";
+  width: 50%;
+  height: 2px;
+  background-color: #ccc;
+  display: block;
+  margin: 5px auto 0;
+}
+
+.staff-form {
+  max-width: 500px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  text-align: left;
+  padding: 20px;
+  border: 1px solid #eee;
+  border-radius: 10px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.05);
+}
+
+.staff-form label {
+  font-weight: bold;
+}
+
+.staff-form input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 15px;
+}
+
+.staff-form button {
+  background-color: #298A81;
+  border: none;
+  padding: 12px;
+  font-weight: bold;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.staff-form button:hover {
+  background-color: #488A99;
+}
