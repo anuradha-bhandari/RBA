@@ -215,8 +215,8 @@ body {
   font-family: Arial, sans-serif;
   background-color: #f8f9fa;
 }
-
-.dashboard {
+/* dashboard css */
+ /*.dashboard {
   position: relative;
   width: 100%;
   height: 100vh;
@@ -230,17 +230,17 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url("dash2.jpg");
+ 
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  opacity: 0.3; /* Adjust the opacity as needed */
+  opacity: 0.3; 
   z-index: 0;
 }
 
 .dashboard > * {
   position: relative;
-  z-index: 1; /* Bring all content above the background */
+  z-index: 1; 
 }
 
 .dashmenu {
@@ -286,7 +286,7 @@ body {
   background-color: #0E94A0;
 }
 
-/* Dropdown checkbox and label */
+
 .has-dropdown input[type="checkbox"] {
   display: none;
 }
@@ -309,4 +309,139 @@ body {
   flex: 1;
   padding: 30px;
   background-color: #fff;
+} */
+
+
+/* General reset and layout */
+
+/* body, html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+.dashboard {
+  display: flex;
+  min-height: 100vh;
+}
+
+.dashmenu {
+  width: 250px;
+  background-color: #333;
+  color: white;
+  padding: 20px 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+}
+
+.main-content {
+  margin-left: 250px;
+  padding: 20px;
+  flex-grow: 1;
+}
+
+.dashnav ul {
+  list-style: none;
+  padding: 0;
+}
+
+.dashnav ul li {
+  padding: 15px 20px;
+}
+
+.dashnav ul li a {
+  color: white;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+
+.dashnav ul li a i {
+  margin-right: 10px;
+}
+
+.has-dropdown label {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.dropdown {
+  display: none;
+  padding-left: 20px;
+}
+
+.has-dropdown input:checked ~ .dropdown {
+  display: block;
+} */
+
+
+.staff-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh; /* Full viewport height */
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+.staff-section h2 {
+  font-size: 28px;
+  margin-bottom: 30px;
+  position: relative;
+  display: inline-block;
+}
+
+.staff-section h2::after {
+  content: "";
+  width: 50%;
+  height: 2px;
+  background-color: #ccc;
+  display: block;
+  margin: 5px auto 0;
+}
+
+.staff-form {
+  max-width: 500px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  text-align: left;
+  padding: 20px;
+  border: 1px solid #eee;
+  border-radius: 10px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.05);
+}
+
+.staff-form label {
+  font-weight: bold;
+}
+
+.staff-form input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 15px;
+}
+
+.staff-form button {
+  background-color: #298A81;
+  border: none;
+  padding: 12px;
+  font-weight: bold;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.staff-form button:hover {
+  background-color: #488A99;
 }

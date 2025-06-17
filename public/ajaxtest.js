@@ -20,14 +20,26 @@ let ajaxImpl = function (str) {
                 column.innerHTML = "" + item.name;
                 row.appendChild(column);
 
+                column = document.createElement("td");
+                column.innerHTML = "" + item.email;
+                row.appendChild(column);
+
+                column = document.createElement("td");
+                column.innerHTML = "" + item.contact_no;
+                row.appendChild(column);
+
+                column = document.createElement("td");
+                column.innerHTML = "" + item.salary;
+                row.appendChild(column);
+
                 // DELETE ICON
                 column = document.createElement("td");
-                column.innerHTML = "<a href='/deleteCat?id=" + item.id + "'><i class='fa-solid fa-trash' style='color: hsl(4, 89%, 48%); font-size:20px;'></i></a>";
+                column.innerHTML = "<a href='/deletestaff?staff_id=" + item.staff_id + "'><i class='fa-solid fa-trash' style='color: hsl(4, 89%, 48%); font-size:20px;'></i></a>";
                 row.appendChild(column);
 
                 // UPDATE ICON
                 column = document.createElement("td");
-                column.innerHTML = "<a href='/updatecategory?id=" + item.id + "'><i class='fa-solid fa-pen-to-square' style='color: #138138; font-size:20px;'></i></a>";
+                column.innerHTML = "<a href='//updatestaff?staff_id=" + item.staff_id+ "'><i class='fa-solid fa-pen-to-square' style='color: #138138; font-size:20px;'></i></a>";
                 row.appendChild(column);
 
                 // Append row to table body
@@ -36,6 +48,6 @@ let ajaxImpl = function (str) {
         }
     };
 
-    xhttp.open("GET", "/searchcatbyname?sd=" + str, true);
+    xhttp.open("GET", "/staffsearch?sd=" + str, true);
     xhttp.send();
 };

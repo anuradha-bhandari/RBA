@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Update Staff</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="staff-section">
+    <h2>Update Staff</h2>
+    <form action="/updatestaffData" method="POST" class="staff-form">
+      <input type="hidden" name="staff_id" value="<%= data.staff_id %>" />
+
+      <label for="staff-name">Staff Name</label>
+      <input type="text" id="staff-name" name="name" value="<%= data.name %>" required />
+
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" value="<%= data.email %>" required />
+
+      <label for="contact">Contact</label>
+      <input type="text" id="contact" name="contact_no" value="<%= data.contact_no %>" required />
+
+      <label for="salary">Salary</label>
+      <input type="number" step="0.01" id="salary" name="salary" value="<%= data.salary %>" required />
+
+      <button type="submit">Update Staff</button>
+    </form>
+  </div>
+
+</body>
+</html>
