@@ -40,4 +40,4 @@ router.get("/staffsearch",ctrl.staffsearchdata);
 
 module.exports = router;   
 
-// controller in this file
+//this is the routes file
